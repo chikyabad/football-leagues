@@ -1,0 +1,34 @@
+{
+  "name": "football-leagues",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^4",
+    "@sap/cds-dk": "^3.3.3",
+    "@sap/hana-client": "^2.7.16",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable",
+      "syntax": "hdi"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana"
+      }
+    },
+    "odata": {
+      "flavor": "x4"
+    }
+  }
+}
